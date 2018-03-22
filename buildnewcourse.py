@@ -1,16 +1,20 @@
+#
+# This does not work right now. What I was going to have it do was look intot he question bank folder and parse out questions, then plug them into moodle using selenium
+#
+
 #!/usr/bin/env python
-# -*- coding: utf-8 -*-
-
-import sys
-
-from selenium import webdriver
+# -*- coding: utf-8 -*- 
+from selenium import webdriver # Documnetation here: http://selenium-python.readthedocs.io/
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import Select
-
+from selenium.webdriver.common.by import By
+from os import listdir
+from os.path import isfile, join
+from os.path import isdir, join
 # For passwords
 import getpass
-
 #For list selection in the terminal (https://github.com/wong2/pick)
+
 from pick import pick
 driver = webdriver.Firefox()
 driver.get("https://jatc669.wccnet.edu/")
